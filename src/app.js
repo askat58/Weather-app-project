@@ -68,7 +68,7 @@ function handleSubmit(event) {
   
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
-searchCity("United Kingdom");
+searchCity("London");
 
 //Current location button
 function logPosition(position) {
