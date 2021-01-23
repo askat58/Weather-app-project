@@ -2,18 +2,6 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-.weather-app {
-  background-image: url(../img/colorful.jpg);
-  background-size: 100%;
-  border: 1px solid rgb(1, 17, 17);
-  border-radius: 15px;
-  box-shadow: 3px 3px 5px rgba(21, 87, 87, 0.906);
-  color: #ffffff;
-  font-style: italic;
-  padding: 10px 15px;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 h1 {
   display: block;
@@ -66,6 +54,22 @@ li {
   padding: 0;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.weather-app {
+  background-image: url(../img/colorful.jpg);
+  background-size: 100%;
+  border: 1px solid rgb(1, 17, 17);
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(21, 87, 87, 0.906);
+  color: #ffffff;
+  font-style: italic;
+  padding: 10px 15px;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -95,7 +99,7 @@ a {
 }
 
 .footer-link {
-  color: #06bcf3;
+  color: #037598;
 }
 
 .footer-link:hover {

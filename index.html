@@ -17,110 +17,113 @@
 </head>
 <body>
   <div class="container">
-    <div class="weather-app my-1">
-      <div class="row text-center mb-4 text-light">
-        <div class="col-6">
-          <div class="today">
-            <h1 id="city">
-              
-            </h1>
-            <h2 id="actual">             
-            </h2>
-          </div>
-        </div>
-        <div class="col-3">
-          <ul>
-            <li>
-              <i class="fas fa-cloud-showers-heavy fa-4x">
-              </i>
-            </li>
-            <li id="description">
-            </li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <h2>
-            <span class="temperature" id="temp">
-              
-              </span>
-              <span class="units">
-                <a href="#" id="celciusTemp">
-                  ℃
-                </a>
-                |
-                <a href="#" id="fahrenheitTemp">
-                  ℉
-                </a>
-              </span> 
-          </h2>
-          <ul>
-            <li class="climate">
-              Humidity: 
-              <span id="city-humidity">
+    <div class="weather-app-wrapper">
+      <div class="weather-app my-1">
+        <div class="row text-center mb-4 text-light">
+          <div class="col-6">
+            <div class="today">
+              <h1 id="city">
                 
-              </span>%
-            </li>
-            <li class="climate">
-              Wind: 
-              <span id="city-wind">
-                
-              </span>
-              m/s 
-            </li>
-          </ul>
-        </div>
-      </div> 
-      <div class="nextdays">  
-        <h3>
-          Next 5 days:
-        </h3>
-          <div class="row">
-            <div class="col">Sat 19/12/2020</div>
-            <div class="col-1"><i class="fas fa-cloud-sun fa-2x"></i></div>
-            <div class="col">12℃</div>
-          </div>
-          <div class="row">
-            <div class="col">Sun 20/12/2020</div>
-            <div class="col-1"><i class="fas fa-sun fa-2x"></i></div>
-            <div class="col">14℃</div>
-          </div>
-          <div class="row">
-            <div class="col">Mon 21/12/2020</div>
-            <div class="col-1"><i class="fas fa-cloud fa-2x"></i></div>
-            <div class="col">-1℃</div>
-          </div>
-          <div class="row">
-            <div class="col">Tue 22/12/2020</div>
-            <div class="col-1"><i class="fas fa-cloud-sun-rain fa-2x"></i></div>
-            <div class="col">4℃</div>
-          </div>
-          <div class="row">
-            <div class="col">Wed 23/12/2020</div>
-            <div class="col-1"><i class="fas fa-sun fa-2x"></i></div>
-            <div class="col">13℃</div>
-          </div>    
-        </div>
-      
-      <form class="search-form bg-transparent pt-3">
-        <div class="row px-5">
-          <div class="col-5">
-            <input id="search-city" type="text" placeholder="Enter a city..." class="form-control" autofocus />
-          </div>
-          <div class="col-4">           
-              <input type="submit" value="Search" class="btn btn-light border border-dark border-1" />
+              </h1>
+              <h2 id="actual">             
+              </h2>
+            </div>
           </div>
           <div class="col-3">
-            <button type="button" id="current-position" class="btn btn-dark border border-white border-1">
-              Your location
-            </button>
+            <ul>
+              <li>
+                <i class="fas fa-cloud-showers-heavy fa-4x">
+                </i>
+              </li>
+              <li id="description">
+              </li>
+            </ul>
           </div>
-        </div>
-      </form>
+          <div class="col-3">
+            <h2>
+              <span class="temperature" id="temp">
+                
+                </span>
+                <span class="units">
+                  <a href="#" id="celciusTemp">
+                    ℃
+                  </a>
+                  |
+                  <a href="#" id="fahrenheitTemp">
+                    ℉
+                  </a>
+                </span> 
+            </h2>
+            <ul>
+              <li class="climate">
+                Humidity: 
+                <span id="city-humidity">
+                  
+                </span>%
+              </li>
+              <li class="climate">
+                Wind: 
+                <span id="city-wind">
+                  
+                </span>
+                m/s 
+              </li>
+            </ul>
+          </div>
+        </div> 
+        <div class="nextdays">  
+          <h3>
+            Next 5 days:
+          </h3>
+            <div class="row">
+              <div class="col">Sat 19/12/2020</div>
+              <div class="col-1"><i class="fas fa-cloud-sun fa-2x"></i></div>
+              <div class="col">12℃</div>
+            </div>
+            <div class="row">
+              <div class="col">Sun 20/12/2020</div>
+              <div class="col-1"><i class="fas fa-sun fa-2x"></i></div>
+              <div class="col">14℃</div>
+            </div>
+            <div class="row">
+              <div class="col">Mon 21/12/2020</div>
+              <div class="col-1"><i class="fas fa-cloud fa-2x"></i></div>
+              <div class="col">-1℃</div>
+            </div>
+            <div class="row">
+              <div class="col">Tue 22/12/2020</div>
+              <div class="col-1"><i class="fas fa-cloud-sun-rain fa-2x"></i></div>
+              <div class="col">4℃</div>
+            </div>
+            <div class="row">
+              <div class="col">Wed 23/12/2020</div>
+              <div class="col-1"><i class="fas fa-sun fa-2x"></i></div>
+              <div class="col">13℃</div>
+            </div>    
+          </div>
+        
+        <form class="search-form bg-transparent pt-3">
+          <div class="row px-5">
+            <div class="col-5">
+              <input id="search-city" type="text" placeholder="Enter a city..." class="form-control" autofocus />
+            </div>
+            <div class="col-4">           
+                <input type="submit" value="Search" class="btn btn-light border border-dark border-1" />
+            </div>
+            <div class="col-3">
+              <button type="button" id="current-position" class="btn btn-dark border border-white border-1">
+                Your location
+              </button>
+            </div>
+          </div>
+        </form> 
+      </div>
       <small>
-        <a class="footer-link" href="https://github.com/askat58/Weather-app-project" target="_blank">Open-source code
-        </a> by Joanna Tucka
-      </small>  
-    </div>
+          <a class="footer-link" href="https://github.com/askat58/Weather-app-project" target="_blank">Open-source code
+          </a> by Joanna Tucka
+        </small>
+        
+    </div>    
   </div>
   <script src="src/app.js"></script>
 </body>
