@@ -1,5 +1,4 @@
 let now = new Date();
-
 let days = [
     "Sunday",
     "Monday",
@@ -9,7 +8,6 @@ let days = [
     "Friday",
     "Saturday"
   ];
-
 let months = [
     "01",
     "02",
@@ -29,7 +27,6 @@ let months = [
   let currentDay = days[now.getDay()];
   let currentMonth = months[now.getMonth()];
   let currentDate = now.getDate();
-
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -40,7 +37,7 @@ let months = [
     minutes = `0${minutes}`;
   }
   
-  let formattedDate = `Today: ${currentDay} ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
+  let formattedDate = `Today is ${currentDay} ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
 
 let actual = document.querySelector("#actual");
   actual.innerHTML = formattedDate;
@@ -70,7 +67,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 searchCity("London");
 
-//Current location button
+//Your current location
 function logPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -89,7 +86,7 @@ let positionButton = document.querySelector("#current-position");
 positionButton.addEventListener("click", yourPosition);
 
 
-//Feature 3
+//Conwert to Celcius/Fahrenheit
 let celcius = document.querySelector("#celciusTemp");
 let fahrenheit = document.querySelector("#fahrenheitTemp");
 
