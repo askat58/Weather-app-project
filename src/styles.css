@@ -75,14 +75,6 @@ a {
   text-decoration: none;
 }
 
-.fa-cloud-showers-heavy {
-  background-color: #000509ad;
-  margin-bottom: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 15px;
-  padding: 10px;
-}
-
 .temperature {
   font-weight: bold;
   font-size: 28px;
@@ -92,6 +84,18 @@ a {
   position: relative;
   top: -14px;
   font-size: 10px;
+}
+
+.active {
+  color: #ffffff;
+  cursor: default;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.active:hover {
+  color: #ffffff;
+  cursor: default;
 }
 
 .climate {
