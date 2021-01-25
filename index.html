@@ -139,10 +139,15 @@
         <form class="search-form bg-transparent pt-3">
           <div class="row px-5">
             <div class="col-5">
-              <input id="search-city" type="text" placeholder="Enter a city..." class="form-control" autofocus />
+              <input id="search-city" type="search" placeholder="Type a city..." class="form-control" autofocus />
             </div>
             <div class="col-4">           
-                <input type="submit" value="Search" class="btn btn-light border border-dark border-1" />
+                <input
+                  type="submit" 
+                  value="Search"
+                  class="btn btn-light border border-dark border-1"
+                  autocomplete="off" 
+                />
             </div>
             <div class="col-3">
               <button type="button" id="current-position" class="btn btn-dark border border-white border-1">
