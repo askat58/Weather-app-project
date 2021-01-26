@@ -1,17 +1,18 @@
 body {
   font-family: "Montserrat Alternates", sans-serif;
+  font-style: italic;
 }
 
 h1 {
   display: block;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   padding-top: 10px;
 }
 
 h2 {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -19,7 +20,6 @@ h2 {
   background-color: #000509ad;
   border: 1px solid #ffffff;
   border-radius: 15px;
-  width: 80%;
 }
 
 h3 {
@@ -37,21 +37,21 @@ h3 {
   box-shadow: 0 0 2em #b1eeee;
   margin: 0 auto;
   font-size: 12px;
-  font-weight: bold;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   line-height: 1.5;
 }
 
 ul {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 li {
   display: block;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -69,7 +69,6 @@ li {
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
   color: #ffffff;
-  font-style: italic;
   padding: 10px 15px;
 }
 
@@ -80,7 +79,7 @@ a {
 
 .temperature {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .units {
@@ -110,12 +109,21 @@ a {
   font-size: 18px;
 }
 
+.big-icon {
+  background-color: #3dc1cb;
+  height: 70px;
+  width: 70px;
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  margin-top: 10px;
+}
+
 .small-icons {
   background-color: #3dc1cb;
   height: 40px;
   width: 40px;
   border: 1px solid #ffffff;
-  border-radius: 25px;
+  border-radius: 35px;
   margin: 1px;
 }
 
@@ -127,7 +135,6 @@ a {
 #search-city,
 #submit-button {
   font-size: 14px;
-  font-weight: bold;
   width: 80px;
 }
 
