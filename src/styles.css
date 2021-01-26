@@ -109,14 +109,12 @@ a {
 }
 
 .small-icons {
-  background-color: #e47e5e;
+  background-color: #3dc1cb;
   height: 60px;
   width: 60px;
   border: 1px solid #ffffff;
   border-radius: 25px;
   margin: 1px;
-  
-  
 }
 
 .footer-link {
@@ -124,6 +122,6 @@ a {
 }
 
 .footer-link:hover {
-  color: #e47e5e;
+  color: #3dc1cb;
   cursor: pointer;
 }
