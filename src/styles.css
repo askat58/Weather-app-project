@@ -111,11 +111,11 @@ a {
 
 .big-icon {
   background-color: #3dc1cb;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border: 1px solid #ffffff;
   border-radius: 35px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .small-icons {
