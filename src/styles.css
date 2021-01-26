@@ -64,6 +64,7 @@ li {
 
 .weather-app {
   background-image: url(../img/colorful.jpg);
+  background-repeat: no-repeat;
   background-size: 100%;
   border: 1px solid #ffffff;
   border-radius: 15px;
