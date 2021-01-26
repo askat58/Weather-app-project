@@ -65,7 +65,7 @@ li {
 .weather-app {
   background-image: url(../img/colorful.jpg);
   background-size: 100%;
-  border: 3px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
   color: #ffffff;
@@ -116,6 +116,11 @@ a {
   border: 1px solid #ffffff;
   border-radius: 25px;
   margin: 1px;
+}
+
+.small-icons:hover {
+  background-color: #48e8f4;
+  
 }
 
 .footer-link {
