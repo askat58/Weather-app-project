@@ -22,7 +22,6 @@ let months = [
     "11",
     "12"
   ];
-
   let currentYear = now.getFullYear();
   let currentDay = days[now.getDay()];
   let currentMonth = months[now.getMonth()];
@@ -31,13 +30,11 @@ let months = [
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  
-  let formattedDate = `Today is ${currentDay} ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
+  let formattedDate = `Today is ${currentDay}<br> ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
 
 let actual = document.querySelector("#actual");
   actual.innerHTML = formattedDate;
@@ -48,17 +45,14 @@ let actual = document.querySelector("#actual");
     if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-    
-
     return `${hours}:${minutes}`;
   }
 
-//Change data
+//Change  weather data
 function displayWeather(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -69,8 +63,6 @@ function displayWeather(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  
 }
 
 function displayForecast(response) {
@@ -92,7 +84,6 @@ function displayForecast(response) {
     </div>
     <div class="col-4">
       ${Math.round(forecast.main.temp)}℃
-      
     </div>
   `; 
   }
@@ -124,8 +115,10 @@ function logPosition(position) {
   let apiKey = "856531c30ebeae24c48d2152bc04716e";
   let apiAdress = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-
   axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function yourPosition() {
@@ -135,9 +128,7 @@ function yourPosition() {
 let positionButton = document.querySelector("#current-position");
 positionButton.addEventListener("click", yourPosition);
 
-
 //Conwert to Celcius/Fahrenheit
-
 function showWeatherFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
