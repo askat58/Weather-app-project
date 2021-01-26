@@ -22,20 +22,22 @@ h2 {
 }
 
 h3 {
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-decoration: underline;
   padding-bottom: 10px;
 }
 
-.nextdays {
+.nexthours {
   background-color: #000509ad;
   border: 1px solid #ffffff;
   border-radius: 15px;
   box-shadow: 0 0 2em #b1eeee;
   margin: 0 auto;
   font-size: 14px;
-  width: 70%;
+  font-weight: bold;
+  width: 60%;
   padding: 10px;
   line-height: 1.5;
 }
@@ -62,7 +64,7 @@ li {
 .weather-app {
   background-image: url(../img/colorful.jpg);
   background-size: 100%;
-  border: 1px solid rgb(1, 17, 17);
+  border: 1px solid #ffffff;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
   color: #ffffff;
@@ -102,11 +104,26 @@ a {
   font-size: 12px;
 }
 
+.weather-forecast {
+  margin: 0 auto;
+}
+
+.small-icons {
+  background-color: #e47e5e;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  margin: 1px;
+  
+  
+}
+
 .footer-link {
   color: #037598;
 }
 
 .footer-link:hover {
-  color: #a1288d;
+  color: #e47e5e;
   cursor: pointer;
 }
