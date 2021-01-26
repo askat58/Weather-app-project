@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   text-decoration: underline;
@@ -36,9 +36,9 @@ h3 {
   border-radius: 15px;
   box-shadow: 0 0 2em #b1eeee;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  width: 60%;
+  width: 100%;
   padding: 10px;
   line-height: 1.5;
 }
@@ -58,7 +58,7 @@ li {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -107,12 +107,13 @@ a {
 
 .weather-forecast {
   margin: 0 auto;
+  font-size: 18px;
 }
 
 .small-icons {
   background-color: #3dc1cb;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border: 1px solid #ffffff;
   border-radius: 25px;
   margin: 1px;
@@ -120,7 +121,14 @@ a {
 
 .small-icons:hover {
   background-color: #48e8f4;
-  
+}
+
+#current-position,
+#search-city,
+#submit-button {
+  font-size: 14px;
+  font-weight: bold;
+  width: 80px;
 }
 
 .footer-link {

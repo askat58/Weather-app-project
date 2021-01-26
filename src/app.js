@@ -34,7 +34,7 @@ let months = [
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let formattedDate = `Today is ${currentDay}<br> ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
+  let formattedDate = `${currentDay}<br> ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
 
 let actual = document.querySelector("#actual");
   actual.innerHTML = formattedDate;
