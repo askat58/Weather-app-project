@@ -64,8 +64,7 @@ li {
 
 .weather-app {
   background-image: url(../img/colorful.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 110%;
   border: 1px solid #ffffff;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
@@ -135,7 +134,7 @@ a {
 #current-position,
 #search-city,
 #submit-button {
-  font-size: 14px;
+  font-size: 12px;
   width: 80px;
 }
 
