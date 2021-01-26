@@ -4,9 +4,9 @@ body {
 
 h1 {
   display: block;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 h2 {
@@ -64,7 +64,7 @@ li {
 .weather-app {
   background-image: url(../img/colorful.jpg);
   background-size: 100%;
-  border: 1px solid #ffffff;
+  border: 3px solid #ffffff;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
   color: #ffffff;
@@ -110,8 +110,8 @@ a {
 
 .small-icons {
   background-color: #3dc1cb;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border: 1px solid #ffffff;
   border-radius: 25px;
   margin: 1px;
