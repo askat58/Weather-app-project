@@ -4,10 +4,11 @@ body {
 }
 
 h1 {
+  color: #f76b8a;
   display: block;
   font-size: 26px;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 h2 {
@@ -18,21 +19,21 @@ h2 {
 
 .today {
   background-color: #000509ad;
-  border: 1px solid #ffffff;
+  border: 1px solid #fcfefe;
   border-radius: 15px;
 }
 
 h3 {
-  font-size: 18px;
+  color: #f76b8a;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
-  text-decoration: underline;
   padding: 10px 0;
 }
 
 .nexthours {
   background-color: #000509ad;
-  border: 1px solid #ffffff;
+  border: 1px solid #fcfefe;
   border-radius: 15px;
   box-shadow: 0 0 2em #b1eeee;
   margin: 10px auto;
@@ -65,15 +66,15 @@ li {
 .weather-app {
   background-image: url(../img/coast.jpg);
   background-size: 110%;
-  border: 1px solid #ffffff;
+  border: 1px solid #fcfefe;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
-  color: #ffffff;
+  color: #fcfefe;
   padding: 10px 10px;
 }
 
 a {
-  color: #ffffff;
+  color: #fcfefe;
   text-decoration: none;
 }
 
@@ -89,14 +90,14 @@ a {
 }
 
 .active {
-  color: #ffffff;
+  color: #fcfefe;
   cursor: default;
   font-size: larger;
   font-weight: bold;
 }
 
 .active:hover {
-  color: #ffffff;
+  color: #fcfefe;
   cursor: default;
 }
 
@@ -110,25 +111,25 @@ a {
 }
 
 .big-icon {
-  background-color: #c243a9;
+  background-color: #f76b8a;
   height: 60px;
   width: 60px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fcfefe;
   border-radius: 35px;
   margin: 10px 0;
 }
 
 .small-icons {
-  background-color: #c243a9;
+  background-color: #f76b8a;
   height: 40px;
   width: 40px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fcfefe;
   border-radius: 35px;
   margin: 1px;
 }
 
 .small-icons:hover {
-  background-color: #c410a0;
+  background-color: #f76b89d9;
 }
 
 #current-position,
@@ -139,10 +140,11 @@ a {
 }
 
 .footer-link {
-  color: #037598;
+  color: #66bfbf;
+  font-weight: bold;
 }
 
 .footer-link:hover {
-  color: #3dc1cb;
+  color: #66bfbf;
   cursor: pointer;
 }
