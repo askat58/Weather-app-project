@@ -59,7 +59,7 @@ li {
 }
 
 .weather-app-wrapper {
-  max-width: 360px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -80,13 +80,13 @@ a {
 
 .temperature {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .units {
   position: relative;
-  top: -14px;
-  font-size: 10px;
+  top: -10px;
+  font-size: 14px;
 }
 
 .active {
@@ -103,6 +103,8 @@ a {
 
 .climate {
   font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .weather-forecast {
@@ -145,6 +147,6 @@ a {
 }
 
 .footer-link:hover {
-  color: #66bfbf;
+  color: #eaf6f6;
   cursor: pointer;
 }
