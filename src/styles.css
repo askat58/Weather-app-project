@@ -1,4 +1,5 @@
 body {
+  background-color: #eaf6f6;
   font-family: "Montserrat Alternates", sans-serif;
   font-style: italic;
 }
@@ -78,9 +79,13 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #f76b8a;
+}
+
 .temperature {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .units {
@@ -141,12 +146,21 @@ a {
   width: 80px;
 }
 
+.footer {
+  font-size: 11px;
+  padding: 10px 0;
+}
+
 .footer-link {
+  border: 1px solid #eaf6f6;
+  border-radius: 20px;
   color: #66bfbf;
   font-weight: bold;
+  padding: 5px;
 }
 
 .footer-link:hover {
+  background: #66bfbf;
   color: #eaf6f6;
   cursor: pointer;
 }
