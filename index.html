@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
-  <title>Weather app</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/dd43dcba0d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="src/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
-</head>
-<body>
-  <div class="container">
-    <div class="weather-app-wrapper">
-      <div class="weather-app my-1">
-        <div class="row text-center mb-4 text-light">
-          <div class="col-5">
-            <div class="today">
-              <h1 id="city"></h1>
-              <h2 id="actual"></h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/dd43dcba0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app my-1">
+          <div class="row text-center mb-4 text-light">
+            <div class="col-5">
+              <div class="today">
+                <h1 id="city"></h1>
+                <h2 id="actual"></h2>
+              </div>
             </div>
-          </div>
-          <div class="col-2">
-            <ul>
-              <li>
-                <img class="big-icon" id="icon" src="#" alt="#"/> 
-              </li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="col-5 mt-3">
-            <h2>
-              <span class="temperature" id="temp"></span>
+            <div class="col-2">
+              <ul>
+                <li>
+                  <img class="big-icon" id="icon" src="#" alt="#" />
+                </li>
+                <li id="description"></li>
+              </ul>
+            </div>
+            <div class="col-5 mt-3">
+              <h2>
+                <span class="temperature" id="temp"></span>
                 <span class="units">
-                  <a href="#" id="celciusTemp" class="active">
-                    ℃
-                  </a>
+                  <a href="#" id="celciusTemp" class="active"> ℃ </a>
                   |
-                  <a href="#" id="fahrenheitTemp">
-                    ℉
-                  </a>
-                </span> 
-            </h2>
-            <ul>
-              <li class="climate">
-                Humidity:
+                  <a href="#" id="fahrenheitTemp"> ℉ </a>
+                </span>
+              </h2>
+              <ul>
+                <li class="climate">
+                  Humidity:
                   <span id="city-humidity"></span>
                   %
-              </li>
-              <li class="climate">
-                Wind: 
-                <span id="city-wind"></span>
-                m/s 
-              </li>
-            </ul>
-          </div>
-        </div> 
-        <div class="nexthours">
-          <div class="row">
-            <div class="col-12">
-              <h3>
-                Forecast for the next hours:
-              </h3>
+                </li>
+                <li class="climate">
+                  Wind:
+                  <span id="city-wind"></span>
+                  m/s
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="row weather-forecast" id="forecast"></div>   
-        </div>
-        <form class="search-form bg-transparent pt-3">
-          <div class="row">
-            <div class="col-5">
-              <input id="search-city" type="search" placeholder="Type a city..." class="form-control w-100" autofocus />
+          <div class="nexthours">
+            <div class="row">
+              <div class="col-12">
+                <h3>Forecast for the next hours:</h3>
+              </div>
             </div>
-            <div class="col-3">           
+            <div class="row weather-forecast" id="forecast"></div>
+          </div>
+          <form class="search-form bg-transparent pt-3">
+            <div class="row">
+              <div class="col-5">
+                <input
+                  id="search-city"
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control w-100"
+                  autofocus
+                />
+              </div>
+              <div class="col-3">
                 <input
                   type="submit"
-                  id="submit-button" 
+                  id="submit-button"
                   value="Search"
                   class="btn btn-light border border-dark border-1"
-                  autocomplete="off" 
+                  autocomplete="off"
                 />
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  id="current-position"
+                  class="btn btn-dark border border-white border-1"
+                >
+                  Your location
+                </button>
+              </div>
             </div>
-            <div class="col-3">
-              <button type="button" id="current-position" class="btn btn-dark border border-white border-1">
-                Your location
-              </button>
-            </div>
-          </div>
-        </form> 
+          </form>
+        </div>
+        <small>
+          <a
+            class="footer-link"
+            href="https://github.com/askat58/Weather-app-project"
+            target="_blank"
+            >Open-source code
+          </a>
+          by Joanna Tucka
+        </small>
       </div>
-      <small>
-        <a class="footer-link" href="https://github.com/askat58/Weather-app-project" target="_blank">Open-source code
-        </a> by Joanna Tucka
-      </small>
-    </div>    
-  </div>
-  <script src="src/app.js"></script>
-</body>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
 </html>

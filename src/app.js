@@ -1,31 +1,46 @@
 let now = new Date();
 let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let months = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12"
-  ];
-  let currentYear = now.getFullYear();
-  let currentDay = days[now.getDay()];
-  let currentMonth = months[now.getMonth()];
-  let currentDate = now.getDate();
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+];
+let currentYear = now.getFullYear();
+let currentDay = days[now.getDay()];
+let currentMonth = months[now.getMonth()];
+let currentDate = now.getDate();
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let formattedDate = `${currentDay}<br> ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
+
+let actual = document.querySelector("#actual");
+actual.innerHTML = formattedDate;
+
+function formatHours(timestamp) {
+  let now = new Date(timestamp);
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -34,34 +49,26 @@ let months = [
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let formattedDate = `${currentDay}<br> ${currentDate}/${currentMonth}/${currentYear}<br>${hours}:${minutes}`;
-
-let actual = document.querySelector("#actual");
-  actual.innerHTML = formattedDate;
-
-  function formatHours(timestamp) {
-    let now = new Date(timestamp);
-    let hours = now.getHours();
-    if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-    return `${hours}:${minutes}`;
-  }
+  return `${hours}:${minutes}`;
+}
 
 //Change  weather data
 function displayWeather(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#city-wind").innerHTML = Math.round(response.data.wind.speed);
-  document.querySelector("#city-humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#city-wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#city-humidity").innerHTML =
+    response.data.main.humidity;
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
-  document.querySelector("#description").innerHTML = response.data.weather[0].main;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
@@ -69,11 +76,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
-  
-  for (let index = 0; index < 6; index++) {
-   forecast = response.data.list[index]; 
 
-   forecastElement.innerHTML += `
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+
+    forecastElement.innerHTML += `
     <div class="col-5 px-5">
       ${formatHours(forecast.dt * 1000)}
     </div>
@@ -85,7 +92,7 @@ function displayForecast(response) {
     <div class="col-4">
       ${Math.round(forecast.main.temp)}℃
     </div>
-  `; 
+  `;
   }
 }
 
@@ -102,11 +109,10 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-city");
   searchCity(cityInputElement.value);
-  }
-  
+}
+
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
-
 
 //Your current location
 function logPosition(position) {
@@ -135,12 +141,11 @@ function showWeatherFahrenheit(event) {
   celcius.classList.remove("active");
   fahrenheit.classList.add("active");
 
-  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celsiusTemperature = null;
-
 
 function showWeatherCelcius(event) {
   event.preventDefault();
