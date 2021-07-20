@@ -24,6 +24,11 @@ h2 {
   border-radius: 15px;
 }
 
+#description {
+  color: #0b2a36;
+  font-weight: bold;
+}
+
 h3 {
   color: #f76b8a;
   font-size: 16px;
@@ -51,8 +56,9 @@ ul {
 }
 
 li {
+  color: #000509ad;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   list-style: none;
   margin: 0;
@@ -66,7 +72,7 @@ li {
 
 .weather-app {
   background-image: url(../img/coast.jpg);
-  background-size: 110%;
+  background-size: cover;
   border: 1px solid #fcfefe;
   border-radius: 15px;
   box-shadow: 3px 3px 5px #0b2a36;
@@ -75,7 +81,7 @@ li {
 }
 
 a {
-  color: #fcfefe;
+  color: #0005096b;
   text-decoration: none;
 }
 
@@ -84,32 +90,37 @@ a:hover {
 }
 
 .temperature {
+  color: #000509ad;
   font-weight: bold;
   font-size: 30px;
 }
 
 .units {
+  color: #000509ad;
   position: relative;
   top: -10px;
   font-size: 14px;
 }
 
 .active {
-  color: #fcfefe;
+  color: #000509ad;
   cursor: default;
   font-size: larger;
   font-weight: bold;
 }
 
 .active:hover {
-  color: #fcfefe;
   cursor: default;
 }
 
 .climate {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  line-height: 1.5;
+  padding: 6px 3px;
+}
+
+.today-description {
+  background: #eee8eba3;
 }
 
 .weather-forecast {
@@ -118,16 +129,16 @@ a:hover {
 }
 
 .big-icon {
-  background-color: #f76b8a;
+  background-color: #cd99a4;
   height: 60px;
   width: 60px;
   border: 1px solid #fcfefe;
   border-radius: 35px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
 
 .small-icons {
-  background-color: #f76b8a;
+  background-color: #cd99a4;
   height: 40px;
   width: 40px;
   border: 1px solid #fcfefe;
@@ -136,7 +147,7 @@ a:hover {
 }
 
 .small-icons:hover {
-  background-color: #f76b89d9;
+  background-color: #f5a3b5;
 }
 
 #current-position,
@@ -147,20 +158,17 @@ a:hover {
 }
 
 .footer {
-  font-size: 11px;
-  padding: 10px 0;
+  font-size: 12px;
+  padding: 8px 0 0 0;
 }
 
 .footer-link {
-  border: 1px solid #eaf6f6;
-  border-radius: 20px;
-  color: #66bfbf;
+  color: #f76b8a;
   font-weight: bold;
-  padding: 5px;
+  padding: 5px 0 0 0;
 }
 
 .footer-link:hover {
-  background: #66bfbf;
-  color: #eaf6f6;
+  color: #f5a3b5;
   cursor: pointer;
 }
